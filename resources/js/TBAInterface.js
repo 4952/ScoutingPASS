@@ -1,7 +1,7 @@
 // TBAInterface funcitons to pull data from TheBlueAlliance.com
 var teams = null;
 var schedule = null;
-var authKey = "uTHeEfPigDp9huQCpLNkWK7FBQIb01Qrzvt4MAjh9z2WQDkrsvNE77ch6bOPvPb6";
+var authKey = "Tzc4nPSbRkwFZc8oH7hjkUZDDZtPWp4m2CHGuqmav84c0TlIZXv2dU9ZM5zL3gqX";
 /**
  * Get list of teams in event
  *
@@ -13,7 +13,7 @@ function getTeams(eventCode) {
 		var url = "https://www.thebluealliance.com/api/v3/event/" + eventCode + "/teams/simple";
 		xmlhttp.open("GET", url, true);
 		xmlhttp.setRequestHeader("X-TBA-Auth-Key", authKey);
-		xmlhttp.onreadystatechange = function() {
+		xmlhttp.onreadystatechange = function () {
 			if (this.readyState == 4 && this.status == 200) {
 				var response = this.responseText;
 				teams = JSON.parse(response);
@@ -35,7 +35,7 @@ function getSchedule(eventCode) {
 		var url = "https://www.thebluealliance.com/api/v3/event/" + eventCode + "/matches/simple";
 		xmlhttp.open("GET", url, true);
 		xmlhttp.setRequestHeader("X-TBA-Auth-Key", authKey);
-		xmlhttp.onreadystatechange = function() {
+		xmlhttp.onreadystatechange = function () {
 			if (this.readyState == 4 && this.status == 200) {
 				var response = this.responseText;
 				schedule = JSON.parse(response);
