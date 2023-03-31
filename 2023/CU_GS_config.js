@@ -158,7 +158,7 @@ var config_data = `
       "choices": {
         "o": "Cone<br>",
         "u": "Cube<br>",
-        "b": "Both<br>",
+        "b": "Les deux<br>",
         "x": "Pas essayé du tout"
       },
       "defaultValue": "x"
