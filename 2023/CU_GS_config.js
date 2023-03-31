@@ -151,7 +151,7 @@ var config_data = `
       "gsCol": "smartPlacement",
       "type": "bool"
     },
-    { "name": Ramassent au sol?",
+    { "name": "Ramassent au sol?",
       "code": "fpu",
       "gsCol": "floorPickUp",
       "type": "radio",
