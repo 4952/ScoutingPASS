@@ -5,7 +5,7 @@ var config_data = `
   "checkboxAs": "10",
   "enable_google_sheets": "true",
   "prematch": [
-    { "name": "Initiales de l'éclaireur",
+    { "name": "Tes initiales",
       "code": "s",
       "gsCol": "scouter",
       "type": "scouter",
@@ -27,8 +27,8 @@ var config_data = `
       "type": "level",
       "choices": {
         "qm": "Quals<br>",
-        "de": "Double élimination<br>",
-        "f": "Finales"
+        "de": "-<br>",
+        "f": "-"
       },
       "defaultValue": "qm",
       "required": "true"
@@ -84,36 +84,36 @@ var config_data = `
       "showUndo": "false",
       "shape": "circle 12 black red true"
     },
-    { "name": "Crossed Cable",
+    { "name": "Traversé le cache-fils",
       "code": "acc",
       "gsCol": "autoCrossedCable",
       "type": "bool"
     },
-    { "name": "Crossed Charging Station",
+    { "name": "Traversé la balance",
       "code": "acs",
       "gsCol": "autoCrossedChargingStation",
       "type": "bool"
     },
-    { "name": "Mobility?",
+    { "name": "Traversé la ligne rouge",
       "code": "am",
       "gsCol": "autoMobility",
       "type": "bool"
     },
-    { "name": "Docked",
+    { "name": "Balance",
       "code": "ad",
       "gsCol": "autoDocked",
       "type":"radio",
       "choices": {
-        "d": "Docked (not Engaged)<br>",
-        "e": "Engaged<br>",
-        "a": "Attempted but failed<br>",
-        "x": "Not attempted"
+        "d": ".<br>",
+        "e": "Réussi<br>",
+        "a": "Pas réussi<br>",
+        "x": "Rien fait"
       },
       "defaultValue": "x"
     }
   ],
   "teleop": [
-    { "name": "Cycle Timer",
+    { "name": "Temps de cycle",
       "code": "tct",
       "gsCol": "cycleTimes",
       "type": "cycle"
@@ -131,22 +131,22 @@ var config_data = `
       "shape": "circle 12 black red true",
       "cycleTimer": "tct"
     },
-    { "name": "Feeder Count<br>(Fed another bot)",
+    { "name": "-<br>",
       "code": "tfc",
       "gsCol": "feedCount",
       "type": "counter"
     },
-    { "name": "Was Defended",
+    { "name": "Un robot l'empêchait de scorer?",
       "code": "wd",
       "gsCol": "wasDefended",
       "type": "bool"
     },
-    { "name": "Who Defended this bot<br>(Team #)",
+    { "name": "Qui jouait la défense<br>(Team #)",
       "code": "who",
       "gsCol": "defenderTeamNum",
       "type": "text"
     },
-    { "name": "Smart Placement<br>(creates Links)",
+    { "name": "-<br>",
       "code": "lnk",
       "gsCol": "smartPlacement",
       "type": "bool"
@@ -165,44 +165,44 @@ var config_data = `
     }
   ],
   "endgame": [
-    { "name": "Docking Timer",
+    { "name": "Temps pour se balancer",
       "code": "dt",
       "gsCol": "dockingTime",
       "type": "timer"
     },
-    { "name": "État final",
+    { "name": "Position final",
       "code": "fs",
       "gsCol": "endgameStatus",
       "type":"radio",
       "choices": {
-        "p": "Parked<br>",
-        "d": "Docked (Not Engaged)<br>",
-        "e": "Engaged<br>",
+        "p": "Stationner<br>",
+        "d": "-<br>",
+        "e": "Balancé<br>",
         "a": "Essai mais échoué<br>",
         "x": "Pas essayé du tout"
       },
       "defaultValue": "x"
     },
-    { "name": "Total # of alliance<br>robots docked/engaged",
+    { "name": "Combien de robot de son allaince sur la balance?<br>",
       "code": "dn",
       "gsCol": "numOfRobotsDocked",
       "type": "counter"
     }
   ],
   "postmatch": [
-    { "name": "Talent du conducteur",
+    { "name": "Talent du driver",
       "code": "ds",
       "gsCol": "driverSkill",
       "type": "radio",
       "choices": {
-        "n": "Not Effective<br>",
-        "a": "Average<br>",
-        "v": "Very Effective<br>",
-        "x": "Not Observed"
+        "n": "Mauvais<br>",
+        "a": "Moyen<br>",
+        "v": "Bon<br>",
+        "x": "Aucune idée"
       },
       "defaultValue": "x"
     },
-    { "name": "Nombre de liens comptés?",
+    { "name": "Combien de link complété?",
       "code": "ls",
       "gsCol": "linksScored",
       "type": "counter"
@@ -212,15 +212,15 @@ var config_data = `
       "gsCol": "defenseRating",
       "type": "radio",
       "choices": {
-        "b": "Below Average<br>",
-        "a": "Average<br>",
-        "g": "Good<br>",
-        "e": "Excellent<br>",
-        "x": "Did not play defense"
+        "b": "Mauvais<br>",
+        "a": "Moyen<br>",
+        "g": "Bon<br>",
+        "e": "Super<br>",
+        "x": "Pas joué en défense"
       },
       "defaultValue": "x"
     },
-    { "name": "Swerve drive?",
+    { "name": "-",
       "code": "sd",
       "gsCol": "swerveDrive",
       "type": "bool"
@@ -238,7 +238,7 @@ var config_data = `
       },
       "defaultValue":"3"
     },
-    { "name": "Morts / Se sont immobilisés",
+    { "name": "Se sont immobilisés?",
       "code": "die",
       "gsCol": "diedOrImmobilized",
       "type": "bool"
@@ -253,7 +253,7 @@ var config_data = `
       "gsCol": "droppedCones",
       "type": "bool"
     },
-    { "name": "Ça ferait un bon partenaire d'alliance?",
+    { "name": "-",
       "tooltip": "Would you want this robot on your alliance in eliminations?",
       "code": "all",
       "gsCol": "goodPartners",
