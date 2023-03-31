@@ -13,7 +13,7 @@ var config_data = `
       "maxSize": 5,
       "required": "true"
     },
-    { "name": "Event",
+    { "name": "Évènement",
       "code": "e",
       "gsCol": "event",
       "type": "event",
@@ -21,14 +21,14 @@ var config_data = `
       "required": "true",
       "disabled": "true"
     },
-    { "name": "Match Level",
+    { "name": "Niveau des matchs",
       "code": "l",
       "gsCol": "level",
       "type": "level",
       "choices": {
         "qm": "Quals<br>",
-        "de": "Double Elimination<br>",
-        "f": "Finals"
+        "de": "Double élimination<br>",
+        "f": "Finales"
       },
       "defaultValue": "qm",
       "required": "true"
@@ -62,7 +62,7 @@ var config_data = `
       "min": 1,
       "max": 99999
     },
-    { "name": "Auto Start Position",
+    { "name": "Position de départ Auto",
       "code": "as",
       "gsCol": "autoStartPosition",
       "type": "field_image",
@@ -72,7 +72,7 @@ var config_data = `
     }
   ],
   "auton": [
-    { "name": "Auto Scoring",
+    { "name": "Scoring en mode Auto",
       "code": "asg",
       "gsCol": "autoScoringGrid",
       "type": "clickable_image",
@@ -151,7 +151,7 @@ var config_data = `
       "gsCol": "smartPlacement",
       "type": "bool"
     },
-    { "name": "Floor Pick UP",
+    { "name": Ramassent au sol?",
       "code": "fpu",
       "gsCol": "floorPickUp",
       "type": "radio",
@@ -159,7 +159,7 @@ var config_data = `
         "o": "Cone<br>",
         "u": "Cube<br>",
         "b": "Both<br>",
-        "x": "Not Attempted"
+        "x": "Pas essayé du tout"
       },
       "defaultValue": "x"
     }
@@ -170,7 +170,7 @@ var config_data = `
       "gsCol": "dockingTime",
       "type": "timer"
     },
-    { "name": "Final Status",
+    { "name": "État final",
       "code": "fs",
       "gsCol": "endgameStatus",
       "type":"radio",
@@ -178,8 +178,8 @@ var config_data = `
         "p": "Parked<br>",
         "d": "Docked (Not Engaged)<br>",
         "e": "Engaged<br>",
-        "a": "Attempted but failed<br>",
-        "x": "Not attempted"
+        "a": "Essai mais échoué<br>",
+        "x": "Pas essayé du tout"
       },
       "defaultValue": "x"
     },
@@ -190,7 +190,7 @@ var config_data = `
     }
   ],
   "postmatch": [
-    { "name": "Driver Skill",
+    { "name": "Talent du conducteur",
       "code": "ds",
       "gsCol": "driverSkill",
       "type": "radio",
@@ -202,12 +202,12 @@ var config_data = `
       },
       "defaultValue": "x"
     },
-    { "name": "Links Scored",
+    { "name": "Nombre de liens comptés?",
       "code": "ls",
       "gsCol": "linksScored",
       "type": "counter"
     },
-    { "name": "Defense Rating",
+    { "name": "Cote de défense",
       "code": "dr",
       "gsCol": "defenseRating",
       "type": "radio",
@@ -225,41 +225,41 @@ var config_data = `
       "gsCol": "swerveDrive",
       "type": "bool"
     },
-    { "name": "Speed Rating",
+    { "name": "Leur vitesse?",
       "code": "sr",
       "gsCol": "speedRating",
       "type": "radio",
       "choices": {
-        "1": "1 (slow)<br>",
+        "1": "1 (lent)<br>",
         "2": "2<br>",
         "3": "3<br>",
         "4": "4<br>",
-        "5": "5 (fast)"
+        "5": "5 (rapide)"
       },
       "defaultValue":"3"
     },
-    { "name": "Died/Immobilized",
+    { "name": "Morts / Se sont immobilisés",
       "code": "die",
       "gsCol": "diedOrImmobilized",
       "type": "bool"
     },
-    { "name": "Tippy<br>(almost tipped over)",
+    { "name": "Instables?<br>(Ont failli tomber)",
       "code": "tip",
       "gsCol": "tippy",
       "type": "bool"
     },
-    { "name": "Dropped Cones (>2)",
+    { "name": "Ils ont perdu/échappé des cônes? (>2)",
       "code": "dc",
       "gsCol": "droppedCones",
       "type": "bool"
     },
-    { "name": "Make good<br>alliance partner?",
+    { "name": "Ça ferait un bon partenaire d'alliance?",
       "tooltip": "Would you want this robot on your alliance in eliminations?",
       "code": "all",
       "gsCol": "goodPartners",
       "type": "bool"
     },
-    { "name": "Comments",
+    { "name": "Commentaires généraux",
       "code": "co",
       "gsCol": "comments",
       "type": "text",
